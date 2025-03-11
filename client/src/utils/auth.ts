@@ -7,6 +7,28 @@ class AuthService {
 
   loggedIn() {
     // TODO: return a value that indicates if the user is logged in
+    ry {
+      const response = await fetch(
+        `https://kanban-board-csbr.onrender.com/auth/checkAuth`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `${this.getToken()}`
+          },
+        }
+      )
+      const data = await response.json();
+      console.log(data)
+  
+      if(!response.ok) {
+        throw new Error('invalid API response, check network tab!');
+      }
+  
+      return data;
+    } catch (err) {
+      console.error('Error checking user auth', err);
+      
+    }
   }
   
   isTokenExpired(token: string) {
