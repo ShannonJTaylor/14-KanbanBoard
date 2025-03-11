@@ -1,7 +1,9 @@
 import { UserLogin } from "../interfaces/UserLogin";
 
-// const apiEndPoint = process.env.NODE_ENV === "development" ? "http://localhost:3001": ""
-const apiEndPoint = "https://one4-kanbanboard-x7l7.onrender.com"
+const apiEndPoint = process.env.NODE_ENV === "development" 
+  ? "http://localhost:3001" 
+  : "https://one4-kanbanboard-x7l7.onrender.com";
+
 
 const login = async (userInfo: UserLogin) => {
   // TODO: make a POST request to the login route

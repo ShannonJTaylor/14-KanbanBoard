@@ -15,7 +15,7 @@ class AuthService {
      // const savedAuth = localStorage.getItem("auth")
     try {
       const response = await fetch(
-        `https://kanban-board-csbr.onrender.com/auth/checkAuth`, {
+        `https://one4-kanbanboard-x7l7.onrender.com/auth/checkAuth`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
