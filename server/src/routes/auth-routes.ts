@@ -47,7 +47,7 @@ export const login = async (req: Request, res: Response) => {
   }
 };
 
-export const checkAuth = async (req: Request, res: Response) => {
+export const checkAuth = async (_req: Request, res: Response) => {
   // TODO: If the user exists and the password is correct, return a JWT token
   try {
     
