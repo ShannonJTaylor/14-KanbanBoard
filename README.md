@@ -98,10 +98,10 @@ If you'd like to contribute, feel free to fork the repository and create a pull 
 ## Deployed Application
 The Kanban Board app is deployed live at https://one4-kanbanboard-x7l7.onrender.com.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
+This project is licensed under ![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 
 Thank you for checking out the Kanban Board app! Feel free to reach out if you have any questions or suggestions for improvements.
 ___
-Made with ❤️ by ShannonJTaylor
+Made with ❤️ by [ShannonJTaylor](https://github.com/ShannonJTaylor)
