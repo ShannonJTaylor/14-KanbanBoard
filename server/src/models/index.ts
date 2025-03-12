@@ -13,7 +13,7 @@ const sequelize = process.env.DB_URL
       dialectOptions: {
         decimalNumbers: true,
       },
-      logging: true,  // Optional: Disable Sequelize query logging (set to true for debugging)
+      logging: false,  // Optional: Disable Sequelize query logging (set to true for debugging)
     });
 
 const User = UserFactory(sequelize);
