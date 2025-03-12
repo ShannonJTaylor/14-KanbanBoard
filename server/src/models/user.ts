@@ -55,5 +55,13 @@ export function UserFactory(sequelize: Sequelize): typeof User {
     }
   );
 
+  sequelize.sync({ force: false }) // This ensures the tables are created or updated if needed
+    .then(() => {
+      console.log("User table synced!");
+    })
+    .catch((error) => {
+      console.error("Error syncing user table:", error);
+    });
+
   return User;
 }
