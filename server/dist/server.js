@@ -15,6 +15,9 @@ app.use(cors({
 }));
 // Serves static files in the entire client's dist folder
 app.use(express.static('../client/dist'));
+app.get('*', (_req, res) => {
+    res.sendFile('index.html', { root: '../client/dist' });
+});
 app.use(express.json());
 app.use(routes);
 const startServer = async () => {
