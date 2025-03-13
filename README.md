@@ -88,7 +88,7 @@ Once the app is running, you can:
 
 ## Screenshots
 Here are some screenshots of the app in action:
-[Screenshot](/client/src/assets/images/Screenshot.png)
+![Screenshot](https://github.com/ShannonJTaylor/14-KanbanBoard/blob/main/client/src/assets/images/Screenshot.png)
 
 
 ## Contributors
