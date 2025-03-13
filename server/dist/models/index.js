@@ -3,6 +3,7 @@ dotenv.config();
 import { Sequelize } from 'sequelize';
 import { UserFactory } from './user.js';
 import { TicketFactory } from './ticket.js';
+console.log(process.env.DB_URL);
 const sequelize = process.env.DB_URL
     ? new Sequelize(process.env.DB_URL)
     : new Sequelize(process.env.DB_NAME || '', process.env.DB_USER || '', process.env.DB_PASSWORD, {

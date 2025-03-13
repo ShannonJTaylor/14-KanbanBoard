@@ -1,4 +1,4 @@
-const forceDatabaseRefresh = false;
+//const forceDatabaseRefresh = false;
 
 import dotenv from 'dotenv';
 dotenv.config();
@@ -11,7 +11,7 @@ import { sequelize } from './models/index.js';
 const app = express();
 const PORT = process.env.PORT || 3001;
 app.use(cors({
-  origin: ['http://localhost:3001', 'http://localhost:3002'], 
+  origin: '*', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
@@ -24,8 +24,21 @@ app.use(express.static('../client/dist'));
 app.use(express.json());
 app.use(routes);
 
-sequelize.sync({force: forceDatabaseRefresh}).then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
-  });
-});
+const startServer = async () => {
+  try {
+    await sequelize.authenticate();
+    app.listen(PORT, () => {
+      console.log(`Server is listening on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+};
+
+startServer();
+
+// sequelize.sync({force: forceDatabaseRefresh}).then(() => {
+//   app.listen(PORT, () => {
+//     console.log(`Server is listening on port ${PORT}`);
+//   });
+// });
