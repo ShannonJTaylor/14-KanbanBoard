@@ -88,6 +88,7 @@ Once the app is running, you can:
 
 ## Screenshots
 Here are some screenshots of the app in action:
+[Screenshot](/client/src/assets/images/Screenshot.png)
 
 
 ## Contributors
